@@ -1,0 +1,43 @@
+page-fourth {
+      .SwipedTabs-indicatorSegemnt{
+        -webkit-transition: 0.3s all;
+        -moz-transition: 0.3s all;
+        -o-transition: 0.3s all;
+        transition: 0.3s all;
+        transform-origin: top 0 left 0 ;
+        height: 1px;
+        position: relative;
+        top: -2px;
+        background-color:black !important;
+        width: 100% !important;
+
+    }
+    .SwipedTabs-tabs ion-segment-button{
+        border: none !important; 
+        color: rgb(42, 42, 42) !important;
+        background-color: darkorange !important;
+        width: 100% !important;
+    }
+    .SwipedTabs-tabs ion-segment-button.SwipedTabs-activeTab{
+       color: whitesmoke !important;
+       width: 100% !important;
+
+    }
+    .SwipedTabs-tabs{
+        border-bottom: solid 1px white !important;
+        width: 100% !important;
+    }
+ion-slides{
+    height: 100vh;
+}
+ion-list{
+    height: 100vh;
+}
+
+button{
+    height: 1vh;
+    display: inline;
+    float: left;
+    padding-left: 0.5em;
+}
+}

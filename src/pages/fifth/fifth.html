@@ -1,0 +1,414 @@
+<!--
+  Generated template for the FifthPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>500 LEVEL</ion-title>
+ <ion-segment class="SwipedTabs-tabs">
+            <ion-segment-button *ngFor='let tab of tabs;let i = index' value="IgnoreMe" (click)="selectTab(i)" [ngClass]='{"SwipedTabs-activeTab":(this.SwipedTabsSlider
+                && (this.SwipedTabsSlider.getActiveIndex() === i || 
+                (tabs.length -1 === i && this.SwipedTabsSlider.isEnd() )))}'>
+                <ion-icon [name]="tab.icon"></ion-icon>
+            </ion-segment-button>
+        </ion-segment>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+
+
+    <!-- indicator -->
+    <div id="indicator" class="SwipedTabs-indicatorSegment"></div>
+
+    <ion-slides #SwipedTabsSlider 
+    (ionSlideDrag)="animateIndicator($event)"(ionSlideWillChange)="updateIndicatorPosition()"
+    (ionSlideDidChange)="updateIndicatorPosition()" (pan)="updateIndicatorPosition()" [pager]="false">
+        <!-- first semester -->
+        <ion-slide>
+        <ion-list padding>
+            <ion-item>
+                <ion-label>ABE501</ion-label>
+                <ion-label>3units</ion-label>
+                <ion-select [(ngModel)]="course1">
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+            
+            <ion-item>
+                <ion-label>ABE573</ion-label>
+                <ion-label>1units</ion-label>
+                <ion-select [(ngModel)]="course2">
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>BME503</ion-label>
+                <ion-label>3units</ion-label>
+                <ion-select [(ngModel)]="course3">
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>BME505</ion-label>
+                <ion-label>3units</ion-label>
+                <ion-select [(ngModel)]="course4">
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>BME593</ion-label>
+                <ion-label>4units</ion-label>
+                <ion-select [(ngModel)]="course5">
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>MEE551</ion-label>
+                <ion-label>3units</ion-label>
+                <ion-select [(ngModel)]="course6">
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+        
+
+                <button ion-button (click)="answer()">Grade Point</button>
+                <ion-label>{{ife}}</ion-label>
+        </ion-list>
+
+        
+        </ion-slide>
+
+
+
+
+
+
+
+        <!-- second semester -->
+        <ion-slide>
+            
+            <ion-list>
+            <ion-item>
+                <ion-label>BME502</ion-label>
+                <ion-label>3units</ion-label>
+                <ion-select [(ngModel)]="course10">
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>BME504</ion-label>
+                <ion-label>3units</ion-label>
+                <ion-select [(ngModel)]="course11">
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>BME512</ion-label>
+                <ion-label>3units</ion-label>
+                <ion-select [(ngModel)]="course12">
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>BME594</ion-label>
+                <ion-label>4units</ion-label>
+                <ion-select [(ngModel)]="course13">
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>BUL506</ion-label>
+                <ion-label>3units</ion-label>
+                <ion-select [(ngModel)]="course14">
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>ELE506</ion-label>
+                <ion-label>3units</ion-label>
+                <ion-select [(ngModel)]="course15">
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+           
+                <button ion-button (click)="answer2()">Grade Point</button>
+                <ion-label>{{ifed}}</ion-label>
+        </ion-list>
+
+        </ion-slide>
+
+
+       <!-- carry over courses      
+        <ion-slide>
+
+            <ion-title>FIRST SEMESTER</ion-title>
+            <ion-item>
+                <ion-label>COURSE 1</ion-label>
+                <ion-select [(ngModel)]="unit">
+                    <ion-option value=0 selected= "true">none</ion-option>
+                    <ion-option value=1>1</ion-option>
+                    <ion-option value=2>2</ion-option>
+                    <ion-option value=3>3</ion-option>
+                    <ion-option value=4>4</ion-option>
+                    <ion-option value=6>6</ion-option>
+                </ion-select>
+                <ion-select [(ngModel)]="grade">
+                <ion-option value=0 selected= "true">none</ion-option>
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>COURSE 2</ion-label>
+                <ion-select [(ngModel)]="unit1">
+                <ion-option value=0 selected= "true">none</ion-option>
+                    <ion-option value=1>1</ion-option>
+                    <ion-option value=2>2</ion-option>
+                    <ion-option value=3>3</ion-option>
+                    <ion-option value=4>4</ion-option>
+                    <ion-option value=6>6</ion-option>
+                </ion-select>
+                
+                <ion-select [(ngModel)]="grade1">
+                <ion-option value=0 selected= "true">none</ion-option>
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>COURSE 3</ion-label>
+                <ion-select [(ngModel)]="unit2">
+                <ion-option value=0 selected= "true">none</ion-option>
+                    <ion-option value=1>1</ion-option>
+                    <ion-option value=2>2</ion-option>
+                    <ion-option value=3>3</ion-option>
+                    <ion-option value=4>4</ion-option>
+                    <ion-option value=6>6</ion-option>
+                </ion-select>
+                <ion-select [(ngModel)]="grade2">
+                <ion-option value=0 selected= "true">none</ion-option>
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>COURSE 4</ion-label>
+                <ion-select [(ngModel)]="unit3">
+                <ion-option value=0 selected= "true">none</ion-option>
+                    <ion-option value=1>1</ion-option>
+                    <ion-option value=2>2</ion-option>
+                    <ion-option value=3>3</ion-option>
+                    <ion-option value=4>4</ion-option>
+                    <ion-option value=6>6</ion-option>
+                </ion-select>
+                <ion-select [(ngModel)]="grade3">
+                <ion-option value=0 selected= "true">none</ion-option>
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>COURSE 5</ion-label>
+                <ion-select [(ngModel)]="unit4">
+                <ion-option value=0 selected= "true">none</ion-option>
+                    <ion-option value=1>1</ion-option>
+                    <ion-option value=2>2</ion-option>
+                    <ion-option value=3>3</ion-option>
+                    <ion-option value=4>4</ion-option>
+                    <ion-option value=6>6</ion-option>
+                </ion-select>
+                <ion-select [(ngModel)]="grade4">
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-title>SECOND SEMESTER</ion-title>
+
+            <ion-item>
+                <ion-label>COURSE 1</ion-label>
+                <ion-select [(ngModel)]="unit5">
+                <ion-option value=0 selected= "true">none</ion-option>
+                    <ion-option value=1>1</ion-option>
+                    <ion-option value=2>2</ion-option>
+                    <ion-option value=3>3</ion-option>
+                    <ion-option value=4>4</ion-option>
+                    <ion-option value=6>6</ion-option>
+                </ion-select>
+                <ion-select [(ngModel)]="grade5">
+                <ion-option value=0 selected= "true">none</ion-option>
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+            
+            <ion-item>
+                <ion-label>COURSE 2</ion-label>
+                <ion-select [(ngModel)]="unit6">
+                <ion-option value=0 selected= "true">none</ion-option>
+                    <ion-option value=1>1</ion-option>
+                    <ion-option value=2>2</ion-option>
+                    <ion-option value=3>3</ion-option>
+                    <ion-option value=4>4</ion-option>
+                    <ion-option value=6>6</ion-option>
+                </ion-select>
+                <ion-select [(ngModel)]="grade6">
+                <ion-option value=0 selected= "true">none</ion-option>
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+            
+            <ion-item>
+                <ion-label>COURSE 3</ion-label>
+                <ion-select [(ngModel)]="unit7">
+                <ion-option value=0 selected= "true">none</ion-option>
+                    <ion-option value=1>1</ion-option>
+                    <ion-option value=2>2</ion-option>
+                    <ion-option value=3>3</ion-option>
+                    <ion-option value=4>4</ion-option>
+                    <ion-option value=6>6</ion-option>
+                </ion-select>
+                <ion-select [(ngModel)]="grade7">
+                <ion-option value=0 selected= "true">none</ion-option>
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+            
+            <ion-item>
+                <ion-label>COURSE 4</ion-label>
+                <ion-select [(ngModel)]="unit8">
+                <ion-option value=0 selected= "true">none</ion-option>
+                    <ion-option value=1>1</ion-option>
+                    <ion-option value=2>2</ion-option>
+                    <ion-option value=3>3</ion-option>
+                    <ion-option value=4>4</ion-option>
+                    <ion-option value=6>6</ion-option>
+                </ion-select>
+                <ion-select [(ngModel)]="grade8">
+                <ion-option value=0 selected= "true">none</ion-option>
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+            
+            <ion-item>
+                <ion-label>COURSE 5</ion-label>
+                <ion-select [(ngModel)]="unit9">
+                <ion-option value=0 selected= "true">none</ion-option>
+                    <ion-option value=1>1</ion-option>
+                    <ion-option value=2>2</ion-option>
+                    <ion-option value=3>3</ion-option>
+                    <ion-option value=4>4</ion-option>
+                    <ion-option value=6>6</ion-option>
+                </ion-select>
+                <ion-select [(ngModel)]="grade9">
+                <ion-option value=0 selected= "true">none</ion-option>
+                    <ion-option value=5>A</ion-option>
+                    <ion-option value=4>B</ion-option>
+                    <ion-option value=3>C</ion-option>
+                    <ion-option value=2>D</ion-option>
+                    <ion-option value=0>F</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <button ion-button full (click)="carryover()">ADD CARRY OVER COURSES</button>
+        </ion-slide> -->
+
+        <!-- cgpa -->
+        <ion-slide>
+
+            <ion-label>FIRST SEMESTER: {{ife}}</ion-label>
+            <ion-label>SECOND SEMESTER: {{ifed}}</ion-label>
+            <ion-label>CGPA: {{total}}</ion-label>
+
+
+        </ion-slide>   
+    </ion-slides>
+</ion-content>
